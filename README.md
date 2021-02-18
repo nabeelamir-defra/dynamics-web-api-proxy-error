@@ -18,18 +18,18 @@ Run `npm i` to install dependencies
 The first thing to make sure is that the project can successfully make a call to dynamics without the proxy. Make sure the .env file is filled in, also comment out the http_proxy and https_proxy for now. The index.js makes a request to a pre-existing collection called 'contacts' if this not available then change this.
 
 Run `npm start` and you should see some results in the console:
-[[screenshots/success-without-proxy.png]]
+![Success without proxy](screenshots/success-without-proxy.png)
 
 Now we must test with the proxy. Run docker-compose up to start up squid proxy on localhost:3128. Uncomment http_proxy and https_proxy in the .env file and run `npm start` again. It should fail:
-[[screenshots/failure-with-proxy.png]]
+![Failure with proxy](screenshots/failure-with-proxy.png)
 
 If I make a similar request using curl via the proxy it succeeds
 
 You can view the logs of the proxy by running 
 `docker exec -it dynamics-web-api-proxy-error_Squid_1 tail -f /var/log/squid/access.log`
 
-Below are the logs, the first 3 are the requests from the dynamics-web-api. The final request is from the curl command.
-[[screenshots/curl-success-with-proxy.png]]
+Below are the logs, the first 3 are the requests from the dynamics-web-api. The final request is from the curl command. It eastablishes connections a secure connection first.
+![curl success with proxy](screenshots/curl-success-with-proxy.png)
 
 
 
