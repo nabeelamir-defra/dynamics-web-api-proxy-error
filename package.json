@@ -1,0 +1,17 @@
+{
+  "name": "dynamics-web-api-proxy-error",
+  "version": "1.0.0",
+  "description": "a project to show the error when using the dynamics-web-api via a proxy",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "dynamics-web-api": "^1.7.1",
+    "simple-oauth2": "^4.2.0"
+  }
+}

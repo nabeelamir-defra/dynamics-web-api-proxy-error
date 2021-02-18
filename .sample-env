@@ -1,0 +1,9 @@
+OAUTH_AUTHORITY_HOST_URL="https://login.microsoftonline.com/"
+OAUTH_TENANT="defra.onmicrosoft.com"
+OAUTH_CLIENT_ID=<your client id>
+OAUTH_CLIENT_SECRET=<your client secret>
+OAUTH_SCOPE=<your auth scope e.g. https://example.com/.default>
+DYNAMICS_API_PATH=< your api path e.g. https://example.com/api/data/v9.1/ >
+DYNAMICS_API_VERSION=<your version e.g. 9.1>
+http_proxy=http://localhost:3128
+https_proxy=http://localhost:3128
